@@ -1,4 +1,4 @@
-# 📁 S401-AppComplexe
+# 📁 S401-VintedClient
 
 ## 👷‍♂️ Authors
 * [Tanguy A.](https://github.com/Shuuss)
