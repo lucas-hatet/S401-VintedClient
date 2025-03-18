@@ -24,6 +24,10 @@ import PolitiqueConfidentialiteView from '../views/PolitiqueConfidentialite.vue'
 import CarriereView from '../views/Carriere.vue'
 import VerificationArticleView from '../views/VerificationArticle.vue'
 import DeveloppementDurableView from '../views/DeveloppementDurable.vue'
+import SignalementMailView from '../views/SignalementMail.vue'
+import Article from '@/views/Article.vue'
+import ArticleDetail from '@/views/ArticleDetail.vue'
+
 
 
 const router = createRouter({
@@ -141,6 +145,21 @@ const router = createRouter({
       path: "/DeveloppementDurable",
       name: "DeveloppementDurable",
       component: DeveloppementDurableView,
+    },
+    {
+      path: "/SignalementMail",
+      name: "SignalementMail",
+      component: SignalementMailView,
+    },
+    {
+      path: "/test",
+      name: "test",
+      component: Article,
+    },
+    {
+      path: "/article/:id",
+      name: "articleDetail",
+      component: ArticleDetail,
     },
   ],
 })

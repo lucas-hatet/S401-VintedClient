@@ -1,3 +1,5 @@
+
+
 <template>
-    <h1>oh oh ...</h1>
+    <img src="../assets/images/error404.png"></img>
 </template>

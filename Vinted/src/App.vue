@@ -1,5 +1,7 @@
 <script setup>
+import './assets/main.css'
 import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
@@ -8,12 +10,12 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+
+        
       </nav>
     </div>
   </header>
-  <RouterView />
+  <div id="container">
+    <RouterView />
+  </div>
 </template>
-
-<style scoped>
-
-</style>
