@@ -8,14 +8,14 @@ defineProps({
 
 <template>
     <div class="articleBox">
-        <router-link class="vendeurArticle" :to="'/article/' + data.idArticle">
+        <RouterLink class="vendeurArticle" >
             <img src="" alt="">
             <div>{{data.vendeur.pseudo}}</div>
-        </router-link>
+        </RouterLink>
         <div class="photoArticle">
-            <a href="">
+            <RouterLink :to="'/article/' + data.idArticle">
                 <img src="" alt="">
-            </a>
+            </RouterLink>
         </div>
         <div class="infosArticle">
             <div class="nomArticle">{{data.nomArticle}}</div>

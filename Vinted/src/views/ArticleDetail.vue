@@ -1,14 +1,12 @@
 <script setup>
-defineProps({
-  data: {
-    required : true
-  },
-})
-
+import { useArticleStore} from '../stores/articles.js'
+const articles = useArticleStore()
+console.log(route.params)
 </script>
 
 <template>
-    <p>{{ data }}</p>   
+    <p>{{ $route.params.id }}</p>
+    <p></p>   
 
 </template>
 

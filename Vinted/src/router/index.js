@@ -25,8 +25,9 @@ import CarriereView from '../views/Carriere.vue'
 import VerificationArticleView from '../views/VerificationArticle.vue'
 import DeveloppementDurableView from '../views/DeveloppementDurable.vue'
 import SignalementMailView from '../views/SignalementMail.vue'
-import Article from '@/views/Article.vue'
-import ArticleDetail from '@/views/ArticleDetail.vue'
+import Article from '../views/Article.vue'
+import ArticleDetail from '../views/ArticleDetail.vue'
+import DetailPageView from '../views/DetailPage.vue'
 
 
 
@@ -160,6 +161,11 @@ const router = createRouter({
       path: "/article/:id",
       name: "articleDetail",
       component: ArticleDetail,
+    },
+    {
+      path: "/DetailPage",
+      name: "DetailPage",
+      component: DetailPageView,
     },
   ],
 })

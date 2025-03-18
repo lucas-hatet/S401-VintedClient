@@ -9,7 +9,14 @@
     font-family: 'Inter';
 }
 
-#container {
+#view {
     width: fit-content;
-    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: red;
 }
