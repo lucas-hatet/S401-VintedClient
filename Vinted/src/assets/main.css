@@ -1,3 +1,10 @@
+:root {
+    --blue: rgb(0, 119, 130);
+    --gray-bg: rgb(240, 240, 240);
+    --gray-border: rgb(200, 200, 200);
+    --gray-text: gray;
+}
+
 @font-face {
 	font-family: 'Inter';
 	src: url('./fonts/Inter_18pt-Regular.ttf');
@@ -14,9 +21,12 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    justify-content: center;
 }
+
+
 
 a:-webkit-any-link {
     text-decoration: none;
-    color: red;
+    color: var(--blue);
 }

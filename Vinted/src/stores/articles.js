@@ -10,10 +10,12 @@ export const useArticleStore = defineStore('articles', () => {
         })
     
     function GetById(id){
+        let article = ref()
         axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Article/"+id)
         .then(response => {
-            return response.data
+            article.value= response.data.value
         })
+        return article
     }
     
     return { list, GetById }

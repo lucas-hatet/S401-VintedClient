@@ -25,9 +25,13 @@ import CarriereView from '../views/Carriere.vue'
 import VerificationArticleView from '../views/VerificationArticle.vue'
 import DeveloppementDurableView from '../views/DeveloppementDurable.vue'
 import SignalementMailView from '../views/SignalementMail.vue'
-import Article from '../views/Article.vue'
+import Articles from '../views/Articles.vue'
 import ArticleDetail from '../views/ArticleDetail.vue'
 import DetailPageView from '../views/DetailPage.vue'
+import CommentMarcheView from '../views/CommentMarche.vue'
+import ClientProfil from '../views/ClientProfil.vue'
+import ConnexionView from '../views/Connexion.vue'
+import InfoUtilisateurView from '../views/InfoUtilisateur.vue'
 
 
 
@@ -155,17 +159,39 @@ const router = createRouter({
     {
       path: "/test",
       name: "test",
-      component: Article,
+      component: Articles,
     },
     {
       path: "/article/:id",
       name: "articleDetail",
       component: ArticleDetail,
+      props:true,
+    },
+    {
+      path: "/client/:id",
+      name: "ClientProfil",
+      component: ClientProfil,
+      props:true,
     },
     {
       path: "/DetailPage",
       name: "DetailPage",
       component: DetailPageView,
+    },
+    {
+      path: "/CommentMarche",
+      name: "CommentMarche",
+      component: CommentMarcheView,
+    },
+    {
+      path: "/Connexion",
+      name: "Connexion",
+      component: ConnexionView,
+    },
+    {
+      path: "/InfoUtilisateur",
+      name: "InfoUtilisateur",
+      component: InfoUtilisateurView,
     },
   ],
 })

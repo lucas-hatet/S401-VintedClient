@@ -1,6 +1,7 @@
 <script setup>
 import ArticleCard from '../components/ArticleCard.vue'
 import { useArticleStore} from '../stores/articles.js'
+
 const articles = useArticleStore()
 </script>
 
@@ -16,13 +17,13 @@ const articles = useArticleStore()
 </template>
 
 <style scoped>
-#articleList {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
-    justify-content: center;    
-    color: gray;
-    font-size: .8rem;
-    margin-top: 20px;
-}
+    #articleList {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+        justify-content: center;    
+        color: var(--gray-text);
+        font-size: .8rem;
+        margin-top: 20px;
+    }
 </style>
