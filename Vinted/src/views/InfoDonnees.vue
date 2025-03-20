@@ -1,6 +1,5 @@
 <template>
         <div>
-        <h2>Données personnelles et sécurité</h2>
         <ul>
             <li>
                 <h3>Quels sont les données collectées, et pourquoi ?</h3>

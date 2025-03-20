@@ -21,7 +21,6 @@ import SignalementPasConfirmeView from '../views/SignalementPasConfirme.vue'
 import SignalerArticleView from '../views/SignalerArticle.vue'
 import VintedProView from '../views/VintedPro.vue'
 import PolitiqueConfidentialiteView from '../views/PolitiqueConfidentialite.vue'
-import CarriereView from '../views/Carriere.vue'
 import VerificationArticleView from '../views/VerificationArticle.vue'
 import DeveloppementDurableView from '../views/DeveloppementDurable.vue'
 import SignalementMailView from '../views/SignalementMail.vue'
@@ -135,11 +134,6 @@ const router = createRouter({
       path: "/PolitiqueConfidentialite",
       name: "PolitiqueConfidentialite",
       component: PolitiqueConfidentialiteView,
-    },
-    {
-      path: "/Carriere",
-      name: "Carriere",
-      component: CarriereView,
     },
     {
       path: "/VerificationArticle",

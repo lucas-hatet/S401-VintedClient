@@ -1,8 +1,10 @@
 :root {
     --blue: rgb(0, 119, 130);
-    --gray-bg: rgb(240, 240, 240);
+    --gray-bg: rgb(245, 245, 245);
+    --gray-thinborder: rgb(230, 230, 230);
     --gray-border: rgb(200, 200, 200);
     --gray-text: gray;
+    --transparent: rgba(0, 0, 0, 0);
 }
 
 @font-face {
@@ -16,12 +18,25 @@
     font-family: 'Inter';
 }
 
+
+
 #view {
-    width: fit-content;
+    width: 100%;
     position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+
+
+h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+p {
+    color: var(--gray-text);
 }
 
 

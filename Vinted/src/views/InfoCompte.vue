@@ -1,6 +1,5 @@
 <template>
         <div>
-        <h2>Mon compte</h2>
         <ul>
             <li>
                 <h3>Comment se connecter ?</h3>

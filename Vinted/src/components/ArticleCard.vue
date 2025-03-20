@@ -3,14 +3,17 @@ defineProps({
   data: {
     required : true
   },
+  vendeur: {
+    required : true
+  }
 })
 </script>
 
 <template>
     <div class="articleBox">
-        <RouterLink class="vendeurArticle" :to="'/client/' + data.vendeur.idClient">
+        <RouterLink class="vendeurArticle" :to="'/client/' + vendeur.idClient">
             <img src="" alt="">
-            <div>{{data.vendeur.pseudo}}</div>
+            <div>{{vendeur.pseudo}}</div>
         </RouterLink>
         <div class="photoArticle">
             <RouterLink :to="'/article/' + data.idArticle">
@@ -20,7 +23,7 @@ defineProps({
         <div class="infosArticle">
             <div class="nomArticle">{{data.nomArticle}}</div>
             <div>{{data.marque.nomMarque}}</div>
-            <div class="prix">{{data.prix}} €</div>
+            <div class="prix">{{ data.prix.toFixed(2) }} €</div>
         </div>
     </div>
 
@@ -31,7 +34,7 @@ defineProps({
     .articleBox {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        width: 250px;
         position: relative;
         word-wrap: break-word;
     }

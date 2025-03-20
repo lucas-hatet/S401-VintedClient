@@ -1,5 +1,6 @@
 <script setup>
 import ArticleCard from '../components/ArticleCard.vue'
+
 import { useArticleStore} from '../stores/articles.js'
 
 const articles = useArticleStore()
@@ -10,8 +11,8 @@ const articles = useArticleStore()
 <template>
     <article id="articleList">
         <ArticleCard 
-            v-for="article in articles.list" 
-            :data="article">
+            v-for="article in articles.filteredArticles()" 
+            :data="article" :vendeur="article.vendeur">
         </ArticleCard>
     </article>
 </template>

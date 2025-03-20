@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 
 export const useArticleStore = defineStore('articles', () => {
-    var list = ref([])
+    let list = ref([])
+    let filter = ""
     axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Article")
         .then(response => {
             list.value = response.data
@@ -17,6 +18,10 @@ export const useArticleStore = defineStore('articles', () => {
         })
         return article
     }
+
+    function filteredArticles(){
+        return this.list.filter(v => v.nomArticle.toLowerCase().indexOf(this.filter.toLowerCase()) != -1)
+    }
     
-    return { list, GetById }
+    return { list, GetById, filter,filteredArticles }
 })

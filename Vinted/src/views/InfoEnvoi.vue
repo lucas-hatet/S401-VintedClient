@@ -1,3 +1,7 @@
 <template>
-    <h2>Des infos sur les envoi : </h2>
+    <div>
+        <ul>
+            <em>Aucune information n'est disponible pour l'instant</em>
+        </ul>
+    </div>
 </template>

@@ -1,3 +1,9 @@
+<script setup>
+import { useArticleStore} from '../stores/articles.js'
+const articles = useArticleStore()
+
+</script>
+
 <template>
     <div id="navbar">
         <select>
@@ -10,8 +16,7 @@
                 </path>
             </svg>
             <form method="get" action="">
-                <input id="searchBar" type="text" placeholder="Rechercher des articles" name="recherche_texte">
-                <input type="submit" hidden="">
+                <input v-model="articles.filter" id="searchBar" type="text" placeholder="Rechercher des articles" name="recherche_texte">
             </form>
         </div>
     </div>
@@ -71,7 +76,7 @@
     }
 
     #searchBar {
-        background-color: rgb(240, 240, 240);
+        background-color: var(--gray-bg);
         border: none;
         font-size: 1rem;
         outline: none;

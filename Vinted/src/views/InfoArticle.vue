@@ -1,6 +1,5 @@
 <template>
         <div>
-        <h2>Articles</h2>
         <ul>
             <li>
                 <h3>Où voir le détail des articles ?</h3>

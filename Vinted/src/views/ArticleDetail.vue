@@ -1,39 +1,59 @@
 <script setup>
-import { useArticleStore} from '../stores/articles.js'
-const articles = useArticleStore()
-const props = defineProps(
-  ['id']
-)
+    import { RouterLink } from 'vue-router';
+    import Button from '../components/Button.vue'
+    import { useArticleStore} from '../stores/articles.js'
+    import Chargement from '../components/Chargement.vue'
 
-const data = articles.GetById(props.id) 
+    const articles = useArticleStore()
+    const props = defineProps(
+    ['id']
+    )
 
-const dateString = data.dateAjout;
-const dateAjout = new Date(dateString);
-console.log(dateString)
+    const data = articles.GetById(props.id) 
+
+    const dateString = data.dateAjout;
+    const dateAjout = new Date(dateString);
+    console.log(dateString)
 </script>
 
 <template>
     <!-- on teste si data existe étant donné que l'appel à l'api est asynchrone, on affiche donc chargement... jusqu'à ce que les données arrivent et à ce moment on les affiche. -->
     <div v-if="data">
-        <p>{{ data }}</p>
-        <h1 >nom article : {{ data.nomArticle }}</h1>
-        <h1>Marque : {{ data.marque.nomMarque }}</h1>
-        <h1>prix : {{ data.prix }} €</h1>
-        <h1>prix avec protection acheteur : {{ data.prix+0.7+data.prix*0.05 }} €</h1><!-- la protection acheteur c'est 0.70 de cout fixe + 5% du prix de l'article -->
-        <h1>taille : {{ data.taille }}</h1>
-        <h1>Matière : {{ data.matiere }}</h1>
-        <h1>Etat : {{ data.etat }}</h1>
-        <h1>Largeur : {{ data.largeur }}</h1>
-        <h1>Longueur : {{ data.longueur }}</h1>
-        <h1>Option de paiement : {{ data.nomArticle }}</h1>
-        <h1>Nombre de vues : {{ data.nbVue }}</h1>
-        <h1>Ajouté : il y a {{ Math.round((new Date() - new Date(data.dateAjout)) / (1000 * 60 * 60 * 24)) }} jours</h1>
+        <div id="column-1" class="column">
+            <div>la photo !</div>
+        </div>
 
+        <div id="column-2" class="column">
+          <h4 id="nomarticle">{{ data.nomArticle }}</h4>
+          <RouterLink>{{ data.marque.nomMarque }}</RouterLink>
 
-        
+          <bloc></bloc>
+          <p>{{ data.prix.toFixed(2) }} €</p>
+          
+          <bloc></bloc>
+          <border></border>
+          <bloc></bloc>
+
+          <div id="list-button">
+            <Button class="big" :link="'.'" :content="'Acheter'"></Button>
+            <Button class="big white" :link="'.'" :content="'Faire une offre'"></Button>
+            <Button class="big white" :link="'.'" :content="'Message'"></Button>
+          </div>
+
+          <div id="caracteristique">
+            <p>{{ data.description }}</p>
+          </div>
+
+          <div id="vendeur">
+              <div id="photo"><img src="" alt=""></div>
+              <div id="pseudo"><a href=""></a></div>
+          </div>
+          
+        </div>
+                
     </div>
     <div v-else>
-        <p>Chargement...</p>
+        <Chargement/>
     </div> 
 
         
@@ -42,11 +62,40 @@ console.log(dateString)
     
 </template>
 
+<style>
+
+    body {
+        background-color: var(--gray-bg);
+    }
+
+    #view > * {
+        display: flex;
+    }
+
+</style>
+
 <style scoped>
-h1{
-    height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+    :has(#column-1, #column-2) {
+        margin-top: 50px;
+        width: 80vw;
+        gap: 5%;
+    }
+
+    #column-1 {
+        width: 65%;
+    }
+
+    #column-2 {
+        background-color: white;
+        width: 30%;
+        padding: 20px;
+    }
+
+
+    #list-button {
+        width: 100%;
+        justify-content: center;
+    }
+
 </style>
