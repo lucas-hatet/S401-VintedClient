@@ -20,19 +20,26 @@
 
 
 
-#view {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+h1 {
+    font-size: 1.6em;
+    font-weight: normal;
 }
 
+h2 {
+    font-size: 1em;
+    font-weight: normal;
+}
 
+h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: var(--blue);
+}
 
 h4 {
     font-size: 1em;
     font-weight: normal;
+    color: var(--blue);
 }
 
 p {

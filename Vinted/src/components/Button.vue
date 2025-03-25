@@ -25,7 +25,6 @@
         list-style: none;
         text-decoration: none;
         font-size: 0.8em;
-        margin-right: 10px;
         border: solid 1px var(--blue);
         background-color: var(--blue);
         color: white;
@@ -41,10 +40,10 @@
 
     .big > div {
         border-width: 2px;
-        height: 40px;
+        height: 30px;
+        font-size: 1em;
         text-align: center;
-        vertical-align: middle;
-        font-size: 1.2em;
+        align-content: center;
     }
 
 </style>

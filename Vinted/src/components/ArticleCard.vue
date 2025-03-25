@@ -7,23 +7,26 @@ defineProps({
     required : true
   }
 })
+
+import Prix from '../components/Prix.vue'
+
 </script>
 
 <template>
     <div class="articleBox">
         <RouterLink class="vendeurArticle" :to="'/client/' + vendeur.idClient">
             <img src="" alt="">
-            <div>{{vendeur.pseudo}}</div>
+            <p>{{vendeur.pseudo}}</p>
         </RouterLink>
         <div class="photoArticle">
-            <RouterLink :to="'/article/' + data.idArticle">
-                <img src="" alt="">
+            <RouterLink :to="'/article/' + data.idArticle + '?nbPhotos=' + data.photos.length">
+                    <img :src="'/src/assets/'+data.photos[0].photo.urlPhoto" alt="">
             </RouterLink>
         </div>
         <div class="infosArticle">
-            <div class="nomArticle">{{data.nomArticle}}</div>
-            <div>{{data.marque.nomMarque}}</div>
-            <div class="prix">{{ data.prix.toFixed(2) }} €</div>
+            <p class="nomArticle">{{data.nomArticle}}</p>
+            <p>{{data.marque.nomMarque}}</p>
+            <Prix :price="data.prix" />
         </div>
     </div>
 
@@ -48,15 +51,12 @@ defineProps({
         align-items: center;
 
     }
-    .vendeurArticle div{
-        color: var(--gray-text);
-    }
     .vendeurArticle img {
         height: 28px;
         width: 28px;
         border-radius: 50%;
     }
-    .vendeurArticle div {
+    .vendeurArticle p {
         vertical-align: middle;
     }
 
@@ -70,9 +70,8 @@ defineProps({
         height: 300px;
         object-fit: cover;
     }
-    .infosArticle div:nth-child(3){
-        margin-top: .8em;
-        margin-bottom: .8em;
+    .infosArticle *:nth-child(3){
+        margin-top: 10px;
     }
 
     .nomArticle {

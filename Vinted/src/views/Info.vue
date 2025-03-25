@@ -1,19 +1,34 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
-    <div>
+    <div class="container">
         <h2>Centre d'aide</h2>
-        <div>
-            <a href="/InfoCompte">Mon Compte</a>
-            <a href="/InfoVendre">Vendre</a>
-            <a href="/InfoPaiement">Paiement et transfert</a>
-            <a href="/InfoEnvoi">Envoi et Retour</a>
-            <a href="/InfoRecherche">Rechercher</a>
-            <a href="/InfoArticle">Articles</a>
-            <a href="/InfoUsers">Autre utilisateurs</a>
-            <a href="/InfoDonnees">Données personnelles et sécurité</a>
+        <div id="lien">
+            <RouterLink to="/InfoCompte">Mon Compte</RouterLink>
+            <RouterLink to="/InfoVendre">Vendre</RouterLink>
+            <RouterLink to="/InfoPaiement">Paiement et transfert</RouterLink>
+            <RouterLink to="/InfoEnvoi">Envoi et Retour</RouterLink>
+            <RouterLink to="/InfoRecherche">Rechercher</RouterLink>
+            <RouterLink to="/InfoArticle">Articles</RouterLink>
+            <RouterLink to="/InfoCookies"></RouterLink>
+            <RouterLink to="/InfoUsers">Autre utilisateurs</RouterLink>
+            <RouterLink to="/InfoDonnees">Données personnelles et sécurité</RouterLink>
         </div>
     </div>
 </template>
 
 <style scoped>
+
+a{
+    margin: 10px;
+    text-decoration: none;
+    color: grey;
+    display: flex;
+
+
+}
 
 </style>

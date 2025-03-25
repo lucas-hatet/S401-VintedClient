@@ -1,5 +1,19 @@
 <template>
+    <div>
+        <h2>Centre d'aide</h2>
         <div>
+            <RouterLink to="/InfoCompte">Mon Compte</RouterLink>
+            <RouterLink to="/InfoVendre">Vendre</RouterLink>
+            <RouterLink to="/InfoPaiement">Paiement et transfert</RouterLink>
+            <RouterLink to="/InfoEnvoi">Envoi et Retour</RouterLink>
+            <RouterLink to="/InfoRecherche">Rechercher</RouterLink>
+            <RouterLink to="/InfoArticle">Articles</RouterLink>
+            <RouterLink to="/InfoCookies"></RouterLink>
+            <RouterLink to="/InfoUsers">Autre utilisateurs</RouterLink>
+            <RouterLink to="/InfoDonnees">Données personnelles et sécurité</RouterLink>
+        </div>
+    </div>
+    <div>
         <ul>
             <li>
                 <h3>Où voir le détail des articles ?</h3>
@@ -7,9 +21,10 @@
                     <h4>Pour voir les caractéristiques et les informations d'un article</h4>
                     <p>
                         Cliquez sur l'article que vous souhaitez consulter.
-                        <img src="../assets/images/aide_article1.png"></img>
-                        Vous pouvez alors consulter les différentes caractéristiques de l'article, sa description, ses photos et son vendeur
-                        <img src="../assets/images/aide_article2.png"></img>
+                        <img src="../assets/images/aide_article1.png" class="redim"></img>
+                        Vous pouvez alors consulter les différentes caractéristiques de l'article, sa description, ses
+                        photos et son vendeur
+                        <img src="../assets/images/aide_article2.png" class="redim"></img>
                     </p>
                 </div>
                 <div></div>
@@ -19,12 +34,15 @@
                 <div>
                     <h4>Vous souhaitez savoir si la taille de l'article vous convient</h4>
                     <p>
-                        Vinted propose un tableau de référence des tailles pour permettre à l'acheteur de connaître les dimensions de l'article.
+                        Vinted propose un tableau de référence des tailles pour permettre à l'acheteur de connaître les
+                        dimensions de l'article.
                     </p>
                     <p>
-                        Ce guide sert uniquement de référence. Les dimensions exactes de chaque taille peuvent légèrement varier
+                        Ce guide sert uniquement de référence. Les dimensions exactes de chaque taille peuvent
+                        légèrement varier
                         en fonction de la marque de l'article et de son pays d'origine.
-                        En cas de doute, nous t'invitons à demander les dimensions exactes au vendeur (Pour contacter, voir <a href="/InfoUtilisateur">Comment contacter le vendeur ?</a>).
+                        En cas de doute, nous t'invitons à demander les dimensions exactes au vendeur (Pour contacter,
+                        voir <RouterLink to="/InfoUtilisateur">Comment contacter le vendeur ?</RouterLink>).
                     </p>
                     <h4>Guide des dimensions des vêtements</h4>
                     <table>
@@ -264,20 +282,22 @@
             <li>
                 <h3>Comment ajouter et voir mes favoris ?</h3>
                 <div>
-                    @if(!(Auth::user()))
-                        <em>Vous devez être connecté à votre compte (Voir <a href="/InfoCompte">Comment se connecter</a>) </em>
+                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter
+                        </RouterLink>)
+                    </em>
                     @endif
                     <h4>Pour ajouter un article à ses favoris</h4>
                     <p>
-                        Vous pouvez ajouter n'importe quel article à vos favoris en cliquant sur l'îcone coeur en bas à droite de la photo de l'article
+                        Vous pouvez ajouter n'importe quel article à vos favoris en cliquant sur l'îcone coeur en bas à
+                        droite de la photo de l'article
                     </p>
-                    <img src="../assets/images/aide_article3.png"></img>
+                    <img src="../assets/images/aide_article3.png" class="redim"></img>
                     <h4>Pour voir ses favoris</h4>
                     <p>
-                        Rendez-vous sur "Voir profil" 
+                        Rendez-vous sur "Voir profil"
                         <!-- <img  src="{{asset ("images/aide_vente3.png")}}" class="redim"> -->
                         <br>et descendez jusqu'à la section "Favoris". Ici vous pouvez consulter et gérer vos favoris.
-                        <img src="../assets/images/aide_article4.png"></img>
+                        <img src="../assets/images/aide_article4.png" class="redim"></img>
                     </p>
                 </div>
                 <div></div>
@@ -285,16 +305,18 @@
             <li>
                 <h3>Comment signaler un article ?</h3>
                 <div>
-                    @if(!(Auth::user()))
-                        <em>Vous devez être connecté à votre compte (Voir <a href="/InfoCompte">Comment se connecter</a>) </em>
+                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter
+                        </RouterLink>)
+                    </em>
                     @endif
                     <h4>Pour signaler un article</h4>
                     <p>
                         Rendez-vous sur la page de l'article concerné, puis cliquez sur le drapeau rouge "🚩".
-                        <img src="../assets/images/aide_article5.png"></img>
+                        <img src="../assets/images/aide_article5.png" class="redim"></img>
                         <br>Arrivé sur la page de signalement, écrivez la raison du signalement de l'article.
-                        <img src="../assets/images/aide_article6.png"></img>
-                        <br>Un message sera envoyé à l'équipe Vinted afin de vérifier si l'article est conforme à la vente.
+                        <img src="../assets/images/aide_article6.png" class="redim"></img>
+                        <br>Un message sera envoyé à l'équipe Vinted afin de vérifier si l'article est conforme à la
+                        vente.
                     </p>
                 </div>
                 <div></div>
@@ -302,3 +324,19 @@
         </ul>
     </div>
 </template>
+
+<style scoped>
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: grey;
+    display: flex;
+}
+
+.redim {
+    max-width: 760px;
+    max-height: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+</style>

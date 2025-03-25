@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     z-index: 1000000;
-    background-color: rgba(128, 128, 128, 0.493);
+    background-color: rgba(200, 200, 200, 0.2);
 }
 
 .loader {

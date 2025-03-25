@@ -7,14 +7,13 @@
 </template>
 
 <style scoped>
+#view>img {
+    max-height: 20%;
+}
 
-    #view > img {
-        max-height: 20%;
-    }
-
-    h4, p {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
+h4,
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
 </style>

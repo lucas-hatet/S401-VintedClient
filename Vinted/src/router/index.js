@@ -31,6 +31,7 @@ import CommentMarcheView from '../views/CommentMarche.vue'
 import ClientProfil from '../views/ClientProfil.vue'
 import ConnexionView from '../views/Connexion.vue'
 import InfoUtilisateurView from '../views/InfoUtilisateur.vue'
+import CreerClientView from '../views/CreerClient.vue'
 
 
 
@@ -186,6 +187,17 @@ const router = createRouter({
       path: "/InfoUtilisateur",
       name: "InfoUtilisateur",
       component: InfoUtilisateurView,
+    },
+    {
+      path: "/CreerClient",
+      name: "CreerClient",
+      component: CreerClientView,
+    },
+    {
+      path: "/categorie/:id",
+      name: "CategorieSearch",
+      component: Articles,
+      props: true
     },
   ],
 })

@@ -1,52 +1,62 @@
+<script setup lang="ts">
+import Button from '@/components/Button.vue';
+
+</script>
+
 <template>
     <article>
-    <h2>Se connecter</h2>
-    <form method="post" action="{{}}">
-        <div>
-        <input class="filltext" type="text" name="mail" placeholder="Email"/>
-        </div>
-        <div>
-        <input class="filltext" type="password" name="motdepasse" placeholder="Mot de passe"/>
-        </div>
-        <input id="sendbutton" type="submit" value="Connexion"/>
-        <p>
-        <!-- Ligne erreurs -->
-        </p>
+        <h2>Se connecter</h2>
+        <form method="post" action="{{}}">
+            <div>
+                <input type="text" name="mail" placeholder="Email" required />
+            </div>
+            <div>
+                <input type="password" name="motdepasse" placeholder="Mot de passe" required/>
+            </div>
+            <Button class="big" content="Connexion" />
+            <div>
+                <p>Pas de compte ? <a href="/créerClient">Créer un compte</a></p>
+                <p><a href="/info/compte">Besoin d'aide ?</a></p>
+            </div>
 
-        <p>Pas de compte ? <a href="/créerClient/">Créer un compte</a></p>
-        <p><a href="/info/compte">Besoin d'aide ?</a></p>
-        
-    </form>
-</article>
+            <p>
+                <!-- Ligne erreurs -->
+            </p>
+
+        </form>
+    </article>
 </template>
 
 <style scoped>
+    article {
+        margin-top: 50px;
+        padding: 40px;
+        width: fit-content;
+        border: var(--gray-thinborder) 1px solid;
+        border-radius: 10px;
+    }
 
-article {
+    form > *:not(:nth-last-child(1)), form > a > * {
+        margin-top: 20px;
+    }
 
-    padding: 40px;
-    width: 15vw;
-    border: rgb(240, 240, 240) 1px solid;
-    border-radius: 10px;
 
-}
 
-input{
-    margin: 10px 0 10px 0;
-    width: 90%;
-    height: 40px;
-}
+    input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-bottom: 1px var(--gray-border) solid;
+        transition: ease-in-out 0.2s;
+    }
+    input:focus {
+        outline: none;
+        font-size: 1.05rem;
+        border-bottom: 2px var(--blue) solid;
+        transition: ease-in-out 0.2s;
+    }
 
-.filltext{
-    border: 0px;
-    border-bottom: 1px gray solid;
-}
-
-#sendbutton{
-    color: white;
-    font-size: 1em;
-    background-color: rgb(0, 119, 130);
-    border: 0px;
-    border-radius: 10px;
-}
+    form:nth-last-child(1) > * {
+        text-align: center;
+    }
 </style>

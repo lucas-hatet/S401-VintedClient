@@ -3,101 +3,50 @@
   import './assets/main.css'
   // components
   import { RouterLink, RouterView } from 'vue-router'
-  import Navbar from './components/Navbar.vue'
-  import Button from './components/Button.vue'
+
+  import Header from './components/Header.vue'
+  import Footer from './components/Footer.vue'
+
 
 </script>
 
 <template>
   <header>
-    <nav id="search-bar">
-      <RouterLink id="homeLogo" to="/"><img src="./assets/images/Vinted_logo.png"></img></RouterLink>
-      <Navbar />
-      <div id="buttons">
-        <Button class="white" content="S'inscrire | Se connecter" link="/Connexion" />
-        <Button content="Vends tes articles" link="/Connexion" />
-      </div>
-      <RouterLink to="/info" id="info">?</RouterLink>
-    </nav>
-    <nav id="categorie-list">
-      <ul>
-        <RouterLink to="/" v-for="i in Array(5).map((_, i) => i + 1)">
-          <li>Catégorie</li>
-        </RouterLink>
-      </ul>
-    </nav>
+    <Header></Header>
   </header>
   <div id="view">
     <RouterView />
   </div>
   <footer>
-
+    <Footer></Footer>
   </footer>
 </template>
 
 <style scoped>
 
-  nav {
+  #view {
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    position: relative;
     display: flex;
-    height: 50px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid var(--gray-thinborder);
-    background-color: white;
-  }
-  
-  nav > * {
-    align-items: center;
-    display: flex;
-  }
-  
-  
-  
-  #search-bar > * {
-    margin: 0 20px;
-    height: 70%;
-  }
-  
-  #homeLogo > img {
-    height: 100%;
   }
 
-  #info {
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid var(--gray-text);
-    color: var(--gray-text);
-    font-weight: bold;
-    margin: 0;
+  header {
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
   }
 
-
-  
-  #categorie-list > ul {
-    height: 100%;
-  }
-  #categorie-list > ul > a {
-    height: 100%;
-    list-style-type: none;
-  }
-  #categorie-list > ul > a > li {
-    background-color: var(--transparent);
-    color: var(--gray-text);
-    height: 100%;
-    align-content: center;
-    padding: 0 20px;
-    border-bottom: 2px solid var(--transparent);
-  }
-  #categorie-list > ul > a > li:hover {
+  footer {
     background-color: var(--gray-bg);
-    border-bottom: 2px solid var(--blue);
-    color: black;
+    margin-top: 50px;
+    padding: 50px;
   }
-
+  
 
 
 </style>
