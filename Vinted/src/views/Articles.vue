@@ -9,9 +9,9 @@ const props = defineProps(
     ['id']
 )
 
+console.log(props.id)
 const articles = useArticleStore()
 if (route.fullPath.includes("categorie")){
-    console.log(props.id)
     articles.GetByIdCategorie(props.id)
 }
 else {
