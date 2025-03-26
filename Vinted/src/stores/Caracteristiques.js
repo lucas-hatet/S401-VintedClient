@@ -3,13 +3,13 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 
 
-export const useArticleStore = defineStore('articles', () => {
+export const useCaracteristiqueStore = defineStore('caracteristiques', () => {
     let list = ref([])
     let filter = ""
     let isLoading = ref(false)
     function GetAll() {
         isLoading.value = true
-        axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Article")
+        axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Caracteristique")
             .then(response => {
                 list.value = response.data
                 isLoading.value = false
@@ -27,7 +27,7 @@ export const useArticleStore = defineStore('articles', () => {
     function GetById(id) {
         isLoading.value = true
         let article = ref()
-        axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Article/" + id)
+        axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Caracteristique/" + id)
             .then(response => {
                 article.value = response.data.value
                 isLoading.value = false

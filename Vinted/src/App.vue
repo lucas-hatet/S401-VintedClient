@@ -44,7 +44,7 @@
   footer {
     background-color: var(--gray-bg);
     margin-top: 50px;
-    padding: 50px;
+    padding: 50px 50px 0 50px;
   }
   
 

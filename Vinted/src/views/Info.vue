@@ -22,13 +22,23 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 
+h2{
+    text-decoration: underline;
+}
+
 a{
     margin: 10px;
     text-decoration: none;
     color: grey;
     display: flex;
-
-
+    
 }
 
+.container{
+
+    margin-top: 40px ;
+    margin-bottom: 40px;
+    font-size: 20px;
+    
+}
 </style>

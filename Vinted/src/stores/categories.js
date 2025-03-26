@@ -7,6 +7,6 @@ export const useCategorieStore = defineStore('categories', () => {
     axios.get("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Categorie")
         .then(response => {
             list.value = response.data
-        })
+        }).catch(error => {console.log(error)})
     return { list }
 })

@@ -1,4 +1,7 @@
 <script setup>
+
+
+
 defineProps({
   data: {
     required : true
@@ -15,12 +18,12 @@ import Prix from '../components/Prix.vue'
 <template>
     <div class="articleBox">
         <RouterLink class="vendeurArticle" :to="'/client/' + vendeur.idClient">
-            <img src="" alt="">
+            <img v-lazy="" alt="">
             <p>{{vendeur.pseudo}}</p>
         </RouterLink>
         <div class="photoArticle">
             <RouterLink :to="'/article/' + data.idArticle + '?nbPhotos=' + data.photos.length">
-                    <img :src="'/src/assets/'+data.photos[0].photo.urlPhoto" alt="">
+                    <img v-lazy="'/src/assets/'+data.photos[0].photo.urlPhoto" alt="">
             </RouterLink>
         </div>
         <div class="infosArticle">

@@ -1,3 +1,3 @@
 <template>
-    <h2>Une page sur le developpement durable : </h2>
+    <h2>Ensemble faisons la transisition sur la seconde main</h2>
 </template>

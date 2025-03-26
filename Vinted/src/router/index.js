@@ -32,6 +32,7 @@ import ClientProfil from '../views/ClientProfil.vue'
 import ConnexionView from '../views/Connexion.vue'
 import InfoUtilisateurView from '../views/InfoUtilisateur.vue'
 import CreerClientView from '../views/CreerClient.vue'
+import AjoutArticle from '@/views/AjoutArticle.vue'
 
 
 
@@ -49,14 +50,6 @@ const router = createRouter({
       component: AboutView,
     },
     {
-      path: "/:catchAll(.*)",
-      name: "Error404",
-      component: ErrorView,
-      meta: {
-        requiresAuth: false
-      }
-    },
-    {
       path: "/Achat",
       name: "Achat",
       component: AchatView,
@@ -67,47 +60,47 @@ const router = createRouter({
       component: InfoView,
     },
     {
-      path: "/InfoCookies",
+      path: "/Info/Cookies",
       name: "InfoCookies",
       component: InfoCookiesView,
     },
     {
-      path: "/InfoCompte",
+      path: "/Info/Compte",
       name: "InfoCompte",
       component: InfoCompteView,
     },
     {
-      path: "/InfoVendre",
+      path: "/Info/Vendre",
       name: "InfoVendre",
       component: InfoVendreView,
     },
     {
-      path: "/InfoPaiement",
+      path: "/Info/Paiement",
       name: "InfoPaiement",
       component: InfoPaiementView,
     },
     {
-      path: "/InfoEnvoi",
+      path: "/Info/Envoi",
       name: "InfoEnvoi",
       component: InfoEnvoiView,
     },
     {
-      path: "/InfoRecherche",
+      path: "/Info/Recherche",
       name: "InfoRecherche",
       component: InfoRechercheView,
     },
     {
-      path: "/InfoArticle",
+      path: "/Info/Article",
       name: "InfoArticle",
       component: InfoArticleView,
     },
     {
-      path: "/InfoUsers",
+      path: "/Info/Users",
       name: "InfoUsers",
       component: InfoUsersView,
     },
     {
-      path: "/InfoDonnees",
+      path: "/Info/Donnees",
       name: "InfoDonnees",
       component: InfoDonneesView,
     },
@@ -196,8 +189,20 @@ const router = createRouter({
     {
       path: "/categorie/:id",
       name: "CategorieSearch",
-      component: Articles,
-      props: true
+      component: Articles
+    },
+    {
+      path: "/:catchAll(.*)",
+      name: "Error404",
+      component: ErrorView,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: "/ajoutArticle",
+      name: "AjoutArticle",
+      component: AjoutArticle
     },
   ],
 })

@@ -15,7 +15,7 @@ import Button from '@/components/Button.vue';
             </div>
             <Button class="big" content="Connexion" />
             <div>
-                <p>Pas de compte ? <a href="/créerClient">Créer un compte</a></p>
+                <p>Pas de compte ? <a href="/CreerClient">Créer un compte</a></p>
                 <p><a href="/info/compte">Besoin d'aide ?</a></p>
             </div>
 
@@ -52,7 +52,7 @@ import Button from '@/components/Button.vue';
     input:focus {
         outline: none;
         font-size: 1.05rem;
-        border-bottom: 2px var(--blue) solid;
+        border-bottom-color: var(--blue);
         transition: ease-in-out 0.2s;
     }
 

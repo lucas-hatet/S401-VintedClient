@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter';
+    list-style-type: none;
 }
 
 
@@ -42,7 +43,7 @@ h4 {
     color: var(--blue);
 }
 
-p {
+li, p {
     color: var(--gray-text);
 }
 
@@ -51,4 +52,7 @@ p {
 a:-webkit-any-link {
     text-decoration: none;
     color: var(--blue);
+}
+a:-webkit-any-link:hover {
+    text-decoration: underline;
 }

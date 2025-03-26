@@ -31,6 +31,11 @@
         padding: 5px 8px;
         border-radius: 5px;
         justify-content: center;
+        transition: ease-in-out 0.2s;
+    }
+    div:hover {
+        transition: ease-in-out 0.2s;
+        -webkit-filter: brightness(92%);
     }
 
     .white > div {
@@ -39,11 +44,13 @@
     }
 
     .big > div {
-        border-width: 2px;
         height: 30px;
         font-size: 1em;
         text-align: center;
         align-content: center;
+    }
+    a:-webkit-any-link {
+        text-decoration: none;
     }
 
 </style>
