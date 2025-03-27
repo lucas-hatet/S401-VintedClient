@@ -2,15 +2,15 @@
     <div>
         <h2>Centre d'aide</h2>
         <div>
-            <RouterLink to="/InfoCompte">Mon Compte</RouterLink>
-            <RouterLink to="/InfoVendre">Vendre</RouterLink>
-            <RouterLink to="/InfoPaiement">Paiement et transfert</RouterLink>
-            <RouterLink to="/InfoEnvoi">Envoi et Retour</RouterLink>
-            <RouterLink to="/InfoRecherche">Rechercher</RouterLink>
-            <RouterLink to="/InfoArticle">Articles</RouterLink>
-            <RouterLink to="/InfoCookies"></RouterLink>
-            <RouterLink to="/InfoUsers">Autre utilisateurs</RouterLink>
-            <RouterLink to="/InfoDonnees">Données personnelles et sécurité</RouterLink>
+            <RouterLink to="/Info/InfoCompte">Mon Compte</RouterLink>
+            <RouterLink to="/Info/InfoVendre">Vendre</RouterLink>
+            <RouterLink to="/Info/InfoPaiement">Paiement et transfert</RouterLink>
+            <RouterLink to="/Info/InfoEnvoi">Envoi et Retour</RouterLink>
+            <RouterLink to="/Info/InfoRecherche">Rechercher</RouterLink>
+            <RouterLink to="/Info/InfoArticle">Articles</RouterLink>
+            <RouterLink to="/Info/InfoCookies"></RouterLink>
+            <RouterLink to="/Info/InfoUsers">Autre utilisateurs</RouterLink>
+            <RouterLink to="/Info/InfoDonnees">Données personnelles et sécurité</RouterLink>
         </div>
     </div>
     <div>
@@ -42,7 +42,7 @@
                         légèrement varier
                         en fonction de la marque de l'article et de son pays d'origine.
                         En cas de doute, nous t'invitons à demander les dimensions exactes au vendeur (Pour contacter,
-                        voir <RouterLink to="/InfoUtilisateur">Comment contacter le vendeur ?</RouterLink>).
+                        voir <RouterLink to="/Info/InfoUsers">Comment contacter le vendeur ?</RouterLink>).
                     </p>
                     <h4>Guide des dimensions des vêtements</h4>
                     <table>
@@ -282,7 +282,7 @@
             <li>
                 <h3>Comment ajouter et voir mes favoris ?</h3>
                 <div>
-                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter
+                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter
                         </RouterLink>)
                     </em>
                     @endif
@@ -305,7 +305,7 @@
             <li>
                 <h3>Comment signaler un article ?</h3>
                 <div>
-                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter
+                    <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter
                         </RouterLink>)
                     </em>
                     @endif
@@ -338,5 +338,9 @@ a {
     max-height: 500px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+h2{
+    text-decoration: underline;
 }
 </style>

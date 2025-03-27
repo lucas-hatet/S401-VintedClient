@@ -32,6 +32,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 51.5vh;
   }
 
   header {

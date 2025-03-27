@@ -33,11 +33,11 @@ console.log();
                 <button @click="idphoto++">Suivant</button>
                 <button @click="idphoto--">Précédent</button>
             </div>
-            <img :src="'/src/assets/'+data.photos[Math.abs(idphoto) % nbPhotos].photo.urlPhoto" alt="">
+            <img v-lazy="'/src/assets/'+data.photos[Math.abs(idphoto) % nbPhotos].photo.urlPhoto" alt="">
         </div>
         
         <div id="column-2" class="column">
-            <section>
+            <section style="padding: 30px;">
                 <div>
                     <h2 id="nomarticle">{{ data.nomArticle }}</h2>
                     <RouterLink>{{ data.marque.nomMarque }}</RouterLink>
@@ -67,7 +67,7 @@ console.log();
                     </ul>
                 </div>
                 <p class="border-top">{{ data.description }}</p>
-                <div class="border-top" style="display: flex;"> <p>Envoi</p> <p style="text-align: right; width: 100%;">À partir de N €</p> </div>
+                <div class="border-top" style="display: flex;"> <p>Envoi</p> <p style="text-align: right; flex: auto;">À partir de N €</p> </div>
                 <div id="list-button">
                     <Button class="big" :link="'.'" :content="'Acheter'"></Button>
                     <Button class="big white" :link="'.'" :content="'Faire une offre'"></Button>
@@ -77,8 +77,11 @@ console.log();
             </section>
 
             <section>
-                <div id="photo"><img src="" alt=""></div>
-                <div id="pseudo"><a href=""></a></div>
+                <RouterLink id="vendeurArticle" :to="'/client/' + data.vendeur.idClient">
+                    <img v-lazy="" alt="">
+                    <p>{{data.vendeur.pseudo}}</p>
+                </RouterLink>
+                <div class="border-top" style="width: 100%; margin-top: 0;"></div>
             </section>
 
         </div>
@@ -100,24 +103,21 @@ console.log();
         gap: 5%;
         display: flex;
         font-size: .95em;
-        width: 80%;
+        width: min-content;
     }
 
     .column {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 80%;
     }
-
-    #column-1 {
-        width: 120%;
+    #column-2 {
+        width: 400px;
     }
 
     #column-2 > section {
         border-radius: 5px;
         border: 1px solid var(--gray-thinborder);
-        padding: 30px;
     }
 
     #column-2 > section > div:not(:last-child) {
@@ -148,4 +148,24 @@ console.log();
         flex-direction: column;
         gap: 10px;
     }
+
+    #vendeurArticle {
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        transition: ease-in-out 0.2s;
+        background-color: white;
+    }
+    #vendeurArticle:hover {
+        transition: ease-in-out 0.2s;
+        -webkit-filter: brightness(95%);
+    }
+
+    #vendeurArticle > img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+
 </style>

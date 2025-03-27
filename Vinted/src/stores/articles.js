@@ -21,6 +21,15 @@ export const useArticleStore = defineStore('articles', () => {
 
     }
 
+    function add(newArticle) {
+        isLoading.value = true
+        axios.post("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/Article", newArticle)
+            .then(response => {
+                list.value.push(response.data)
+                isLoading.value = false
+            })
+            .catch(error => { console.log(error) })
+    }
 
 
 
@@ -59,5 +68,5 @@ export const useArticleStore = defineStore('articles', () => {
     }
 
 
-    return { list, GetById, filter, filteredArticles, GetByIdCategorie, GetAll, isLoading }
+    return { list, GetById, filter, filteredArticles, GetByIdCategorie, GetAll, isLoading, add }
 })

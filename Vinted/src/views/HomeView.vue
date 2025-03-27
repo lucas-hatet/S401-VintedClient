@@ -13,7 +13,7 @@ articles.GetAll()
 <template>
     <div id="banner">
         <div id="banner-bg">
-            <img src="../assets//images/banner.jpg" />
+            <img :src="'/src/assets/images/banner.jpg'" fetchpriority="high"/>
         </div>
         <div id="overlay">
             <h1 class="web_ui__Text__text web_ui__Text__heading-xl web_ui__Text__left web_ui__Text__parent">Prêts à

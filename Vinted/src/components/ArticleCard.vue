@@ -1,8 +1,7 @@
 <script setup>
 
 
-
-defineProps({
+const props = defineProps({
   data: {
     required : true
   },
@@ -10,7 +9,7 @@ defineProps({
     required : true
   }
 })
-
+console.log(props.data)
 import Prix from '../components/Prix.vue'
 
 </script>
@@ -22,8 +21,8 @@ import Prix from '../components/Prix.vue'
             <p>{{vendeur.pseudo}}</p>
         </RouterLink>
         <div class="photoArticle">
-            <RouterLink :to="'/article/' + data.idArticle + '?nbPhotos=' + data.photos.length">
-                    <img v-lazy="'/src/assets/'+data.photos[0].photo.urlPhoto" alt="">
+            <RouterLink :to="'/article/' + data.idArticle /*+ '?nbPhotos=' + data.photos.length*/">
+                    <img v-lazy="'/src/assets/' + data.photos[0].photo.urlPhoto" v-if="data.photos[0]" alt="">
             </RouterLink>
         </div>
         <div class="infosArticle">

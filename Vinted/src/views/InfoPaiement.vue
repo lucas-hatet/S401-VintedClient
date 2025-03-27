@@ -2,15 +2,15 @@
     <div>
         <h2>Centre d'aide</h2>
         <div>
-            <RouterLink to="/InfoCompte">Mon Compte</RouterLink>
-            <RouterLink to="/InfoVendre">Vendre</RouterLink>
-            <RouterLink to="/InfoPaiement">Paiement et transfert</RouterLink>
-            <RouterLink to="/InfoEnvoi">Envoi et Retour</RouterLink>
-            <RouterLink to="/InfoRecherche">Rechercher</RouterLink>
-            <RouterLink to="/InfoArticle">Articles</RouterLink>
-            <RouterLink to="/InfoCookies"></RouterLink>
-            <RouterLink to="/InfoUsers">Autre utilisateurs</RouterLink>
-            <RouterLink to="/InfoDonnees">Données personnelles et sécurité</RouterLink>
+            <RouterLink to="/Info/InfoCompte">Mon Compte</RouterLink>
+            <RouterLink to="/Info/InfoVendre">Vendre</RouterLink>
+            <RouterLink to="/Info/InfoPaiement">Paiement et transfert</RouterLink>
+            <RouterLink to="/Info/InfoEnvoi">Envoi et Retour</RouterLink>
+            <RouterLink to="/Info/InfoRecherche">Rechercher</RouterLink>
+            <RouterLink to="/Info/InfoArticle">Articles</RouterLink>
+            <RouterLink to="/Info/InfoCookies"></RouterLink>
+            <RouterLink to="/Info/InfoUsers">Autre utilisateurs</RouterLink>
+            <RouterLink to="/Info/InfoDonnees">Données personnelles et sécurité</RouterLink>
         </div>
     </div>
     <h2>Des infos sur les paiements : </h2>
@@ -22,7 +22,7 @@
                 <h3>Comment modifier / supprimer une carte ?</h3>
                 <div>
                     @if(!(Auth::user()))
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter</RouterLink>) </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter</RouterLink>) </em>
                     @endif
                     <h4>Vous souhaitez modifier une carte de débit enregistrée</h4>
                     <p>Sur votre profil (Bouton "Voir profil" en haut de l'écran),</p>
@@ -50,7 +50,7 @@
                 <h3>Comment acheter un article ?</h3>
                 <div>
                     @if(!(Auth::user()))
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter</RouterLink>) </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter</RouterLink>) </em>
                     @endif
                     <h4>Vous souhaitez acheter un article</h4>
                     <p>
@@ -74,7 +74,7 @@
                 <h3>Comment régler avec votre porte-monnaie / par carte bancaire ?</h3>
                 <div>
                     @if(!(Auth::user()))
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter</RouterLink>) </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter</RouterLink>) </em>
                     @endif
                     <h4>Vous souhaitez payer par carte bancaire</h4>
                     <p>
@@ -106,5 +106,9 @@ a {
     max-height: 500px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+h2{
+    text-decoration: underline;
 }
 </style>

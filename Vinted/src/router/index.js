@@ -31,7 +31,7 @@ import CommentMarcheView from '../views/CommentMarche.vue'
 import ClientProfil from '../views/ClientProfil.vue'
 import ConnexionView from '../views/Connexion.vue'
 import InfoUtilisateurView from '../views/InfoUtilisateur.vue'
-import CreerClientView from '../views/CreerClient.vue'
+import CreerClient from '../views/CreerClient.vue'
 import AjoutArticle from '@/views/AjoutArticle.vue'
 
 
@@ -60,47 +60,47 @@ const router = createRouter({
       component: InfoView,
     },
     {
-      path: "/Info/Cookies",
+      path: "/Info/InfoCookies",
       name: "InfoCookies",
       component: InfoCookiesView,
     },
     {
-      path: "/Info/Compte",
+      path: "/Info/InfoCompte",
       name: "InfoCompte",
       component: InfoCompteView,
     },
     {
-      path: "/Info/Vendre",
+      path: "/Info/InfoVendre",
       name: "InfoVendre",
       component: InfoVendreView,
     },
     {
-      path: "/Info/Paiement",
+      path: "/Info/InfoPaiement",
       name: "InfoPaiement",
       component: InfoPaiementView,
     },
     {
-      path: "/Info/Envoi",
+      path: "/Info/InfoEnvoi",
       name: "InfoEnvoi",
       component: InfoEnvoiView,
     },
     {
-      path: "/Info/Recherche",
+      path: "/Info/InfoRecherche",
       name: "InfoRecherche",
       component: InfoRechercheView,
     },
     {
-      path: "/Info/Article",
+      path: "/Info/InfoArticle",
       name: "InfoArticle",
       component: InfoArticleView,
     },
     {
-      path: "/Info/Users",
+      path: "/Info/InfoUsers",
       name: "InfoUsers",
       component: InfoUsersView,
     },
     {
-      path: "/Info/Donnees",
+      path: "/Info/InfoDonnees",
       name: "InfoDonnees",
       component: InfoDonneesView,
     },
@@ -184,7 +184,7 @@ const router = createRouter({
     {
       path: "/CreerClient",
       name: "CreerClient",
-      component: CreerClientView,
+      component: CreerClient,
     },
     {
       path: "/categorie/:id",

@@ -18,6 +18,7 @@ const loadArticles = () => {
     else {
         articles.GetAll()
     }    
+
 }
 loadArticles()
 
@@ -28,7 +29,6 @@ watch(
         loadArticles()
     }
 )
-
 </script>
 
 

@@ -2,22 +2,22 @@
     <div>
         <h2>Centre d'aide</h2>
         <div>
-            <RouterLink to="/InfoCompte">Mon Compte</RouterLink>
-            <RouterLink to="/InfoVendre">Vendre</RouterLink>
-            <RouterLink to="/InfoPaiement">Paiement et transfert</RouterLink>
-            <RouterLink to="/InfoEnvoi">Envoi et Retour</RouterLink>
-            <RouterLink to="/InfoRecherche">Rechercher</RouterLink>
-            <RouterLink to="/InfoArticle">Articles</RouterLink>
-            <RouterLink to="/InfoCookies"></RouterLink>
-            <RouterLink to="/InfoUsers">Autre utilisateurs</RouterLink>
-            <RouterLink to="/InfoDonnees">Données personnelles et sécurité</RouterLink>
+            <RouterLink to="/Info/InfoCompte">Mon Compte</RouterLink>
+            <RouterLink to="/Info/InfoVendre">Vendre</RouterLink>
+            <RouterLink to="/Info/InfoPaiement">Paiement et transfert</RouterLink>
+            <RouterLink to="/Info/InfoEnvoi">Envoi et Retour</RouterLink>
+            <RouterLink to="/Info/InfoRecherche">Rechercher</RouterLink>
+            <RouterLink to="/Info/InfoArticle">Articles</RouterLink>
+            <RouterLink to="/Info/InfoCookies"></RouterLink>
+            <RouterLink to="/Info/InfoUsers">Autre utilisateurs</RouterLink>
+            <RouterLink to="/Info/InfoDonnees">Données personnelles et sécurité</RouterLink>
         </div>
         <div>
             <ul>
                 <li>
                     <h3>Comment mettre en vente ?</h3>
                     <div>
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter)</RouterLink> </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter)</RouterLink> </em>
                         <h4>Vous souhaitez mettre en vente un article</h4>
                         <p>
                             Il faudra vous rendre sur la page de création d'article : après vous être connecté cliquez
@@ -40,7 +40,7 @@
                 <li>
                     <h3>Comment passer mon article à l'état de "Brouillon" / "En vente" ?</h3>
                     <div>
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter)</RouterLink> </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter)</RouterLink> </em>
                         <h4>Vous souhaitez cacher votre article, ou le montrer aux autres utilisateurs</h4>
                         <p>
                             Il vous suffit de vous rendre sur la liste de vos articles à vendre (Bouton "Voir profil" en
@@ -55,7 +55,7 @@
                 <li>
                     <h3>Comment modifier un article après signalement ?</h3>
                     <div>
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter)</RouterLink> </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter)</RouterLink> </em>
                         <h4>Vous souhaitez modifier un article déjà en vente</h4>
                         <p>
                             Rendez-vous sur votre profil, dans la section "Articles signalés" :
@@ -74,7 +74,7 @@
                 <li>
                     <h3>Comment supprimer un article ?</h3>
                     <div>
-                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/InfoCompte">Comment se connecter)</RouterLink> </em>
+                        <em>Vous devez être connecté à votre compte (Voir <RouterLink to="/Info/InfoCompte">Comment se connecter)</RouterLink> </em>
                         <h4>Vous souhaitez supprimer définitivement un article</h4>
                         <p>
                             Il vous suffit de vous rendre sur la liste de vos articles à vendre (Bouton "Voir profil" en
@@ -113,5 +113,9 @@ a {
     max-height: 500px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+h2{
+    text-decoration: underline;
 }
 </style>

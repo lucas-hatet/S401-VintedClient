@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 
 export const useClientStore = defineStore('clients', () => {
+    
 
     function GetById(id){
         let client = ref()
@@ -12,6 +13,13 @@ export const useClientStore = defineStore('clients', () => {
         })
         return client
     }
+
+    function Post(client){
+        axios.post("https://apivinted-athmexcugqgcdudf.francecentral-01.azurewebsites.net/api/client")
+        .then(response => {
+        })
+        return client
+    }
     
-    return { GetById }
+    return { GetById, newClients, Post }
 })

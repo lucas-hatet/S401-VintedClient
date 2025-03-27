@@ -7,19 +7,27 @@
         link: {
             type: String,
             required: false
+        },
+        type: {
+            type: String,
+            required: false
         }
     } )
 </script>
 
 <template>
-    <RouterLink :to="link">
-        <div>{{ content }}</div>
-    </RouterLink>
+    <div v-if="type != null"><button>{{ content }}</button></div>
+    <div v-else>
+        <RouterLink :to="link">
+            <button>{{ content }}</button>
+        </RouterLink>
+    </div>
+        
 </template>
 
 <style scoped>
 
-    div {
+    button {
         font-family: 'Inter';
         margin: 0;
         list-style: none;
@@ -33,18 +41,20 @@
         justify-content: center;
         transition: ease-in-out 0.2s;
     }
-    div:hover {
+    button:hover {
         transition: ease-in-out 0.2s;
         -webkit-filter: brightness(92%);
+        cursor: pointer;
     }
 
-    .white > div {
+    .white button {
         background-color: white;
         color: var(--blue);
     }
 
-    .big > div {
-        height: 30px;
+    .big button {
+        height: 45px;
+        width: 100%;
         font-size: 1em;
         text-align: center;
         align-content: center;

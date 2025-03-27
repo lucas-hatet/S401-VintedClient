@@ -20,9 +20,9 @@ import { RouterLink } from 'vue-router';
         <div id="column-3">
             <h1>Aide</h1>
             <p><RouterLink to="/Info">Centre d'aide</RouterLink></p>
-            <p><RouterLink to="/Info/Compte">Mon compte</RouterLink></p>
-            <p><RouterLink to="/Info/Vendre">Vendre</RouterLink></p>
-            <p><RouterLink to="/Info/Paiement">Paiements et transferts</RouterLink></p>
+            <p><RouterLink to="/Info/InfoCompte">Mon compte</RouterLink></p>
+            <p><RouterLink to="/Info/InfoVendre">Vendre</RouterLink></p>
+            <p><RouterLink to="/Info/InfoPaiement">Paiements et transferts</RouterLink></p>
         </div>
     </div>
     <div id="politic">
